@@ -1,0 +1,32 @@
+name: Space Shooter Contribution Graph
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-space-shooter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+
+      - name: Create output directory
+        run: mkdir -p assets
+
+      - name: Generate space shooter GIF
+        uses: czl9707/gh-space-shooter@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          username: NugrahaAdani
+          output-path: assets/gh-space-shooter.gif
+          strategy: random
+          fps: 40
+          commit-message: "chore: update space shooter contribution graph"

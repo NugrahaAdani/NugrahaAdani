@@ -141,7 +141,11 @@ Building scalable web applications • Exploring AI technologies • Learning cl
 
 ## 🎮 Contribution Graph
 <p align="center">
-  <img src="assets/gh-space-shooter.gif" alt="Space shooter contribution graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="assets/github-snake.svg" />
+    <img src="assets/github-snake.svg" alt="GitHub contribution snake animation" />
+  </picture>
 </p>
 
 <div align="center">
